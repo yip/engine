@@ -1,0 +1,20 @@
+{
+	"name": "YipEng",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node app.js"
+	},
+	"dependencies": {
+		"express": "3.3.4",
+		"jade": "*",
+		"ejs": "~0.8.4",
+		"lodash": "~1.3.1",
+		"when": "~2.3.0",
+		"firebase": "~0.6.3"
+	},
+	"devDependencies": {
+		"mocha": "~1.12.0",
+		"chai": "~1.7.2"
+	}
+}
