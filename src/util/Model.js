@@ -43,9 +43,9 @@ Model.extend = function(props) {
 			Constructor.prototype[i] = props[i];
 		}
 	}
-	for (var i in this) {
-		if (hasOwn.call(this, i)) {
-			Constructor[i] = this[i];
+	for (var j in this) {
+		if (hasOwn.call(this, j)) {
+			Constructor[j] = this[j];
 		}
 	}
 	return Constructor;
