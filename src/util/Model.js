@@ -4,8 +4,9 @@ var _ = require('lodash');
 var when = require('when');
 var Firebase = require('firebase');
 
-var hasOwn = {}.hasOwnProperty;
-var toString = {}.toString;
+var ObjectProto = Object.prototype;
+var hasOwn = ObjectProto.hasOwnProperty;
+var toString = ObjectProto.toString;
 
 module.exports = Model;
 
@@ -42,9 +43,9 @@ Model.extend = function(props) {
 			Constructor.prototype[i] = props[i];
 		}
 	}
-	for (var i in this) {
-		if (hasOwn.call(this, i)) {
-			Constructor[i] = this[i];
+	for (var j in this) {
+		if (hasOwn.call(this, j)) {
+			Constructor[j] = this[j];
 		}
 	}
 	return Constructor;

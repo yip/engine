@@ -8,7 +8,7 @@ var Firebase = require('firebase');
 function DB(engine, config) {
 	this.config = config;
 	this.engine = engine;
-};
+}
 
 DB.prototype = {
 
