@@ -4,8 +4,9 @@ var _ = require('lodash');
 var when = require('when');
 var Firebase = require('firebase');
 
-var hasOwn = {}.hasOwnProperty;
-var toString = {}.toString;
+var ObjectProto = Object.prototype;
+var hasOwn = ObjectProto.hasOwnProperty;
+var toString = ObjectProto.toString;
 
 module.exports = Model;
 
