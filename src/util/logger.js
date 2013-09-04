@@ -7,7 +7,7 @@ var logger = module.exports = function() {
 };
 
 logger.log = function() {
-	var args = [].slice.call(arguments);
+	var args = Array.prototype.slice.call(arguments);
 	args.unshift('YIP:: ');
 	return console.log.apply(console, args);
 };
