@@ -1,198 +1,131 @@
-[
-    {
-        "user" : {
-            "user_id" : 1,
-            "user_name" : "Joe",
-            "user_surname" : "Bloggs",
-            "user_screen_name" : "joebloggs",
-            "user_reputation" : 0,
-            "user_level" : 1,
-            "user_twitter" : "joeblog04",
-            "user_email" : "joe@bloggs.za",
-            "user_description" : "A normal dude",
-            "user_picture" : "09.jpg"
+{
+    "users" : {
+        "joebloggs" : {
+            "name" : "Joe",
+            "surname" : "Bloggs",
+            "reputation" : 0,
+            "level" : 1,
+            "twitter" : "joeblog04",
+            "email" : "joe@bloggs.za",
+            "description" : "A normal dude",
+            "picture" : "09.jpg"
         },
-        "report" : {
-            "report_id" : 2,
-            "report_title" : "UFO sighting",
-            "report_description" : "Saw a flying saucepan earlier today",
-            "report_time_start" : 1378743848616,
-            "report_time_end" : null,
-            "report_timezone" : "BST",
-            "report_lat" : 51.505300,
-            "report_long" : -0.165477,
-            "report_media" : {
+        "bernardone" : {
+            "name" : "Bernardo",
+            "surname" : "Bertolucci",
+            "screen_name" : "bernardone",
+            "reputation" : 4,
+            "level" : 1,
+            "twitter" : "bernardbert",
+            "email" : "bbrb@gmail.com",
+            "description" : "Professional reporter",
+            "picture" : "bbernardone.jpg"
+        }},
+    "reports" : {
+        "ufo_sighting" : {
+            "title" : "UFO sighting",
+            "reporter" : 1,
+            "description" : "Saw a flying saucepan earlier today",
+            "time_start" : 1378743848616,
+            "time_end" : null,
+            "timezone" : "BST",
+            "location" : [51.505300, -0.165477],
+            "media" : {
                 "media_video" : [],
                 "media_pictures" : [],
                 "media_audio" : [],
                 "media_links" : []
             },
-            "report_tags" : ["awesome", "UFO"],
-            "report_importance" : 1,
-            "report_editable" : false,
-            "report_upvotes" : 2,
-            "report_downvotes" : 2
+            "tags" : ["awesome", "UFO"],
+            "importance" : 1,
+            "editable" : false,
+            "upvotes" : 2,
+            "downvotes" : 2
         },
-        "event" : {
-            "event_id" : 3,
-            "event_name" : "London ufo sightings of 09/09/13",
-            "event_reports" : [2,5,10],
-            "event_time_start" : 1378743848616,
-            "event_time_end" : null,
-            "event_timezone" : "BST",
-            "event_lat" : 51.507298,
-            "event_long" : -0.127392,
-            "event_importance" : 2,
-            "event_upvotes" : 3,
-            "event_downvotes" : 2,
-            "event_category" : "custom"
-        }
-    },
-    {
-        "user" : {
-            "user_id" : 1,
-            "user_name" : "Joe",
-            "user_surname" : "Bloggs",
-            "user_screen_name" : "joebloggs",
-            "user_reputation" : 0,
-            "user_level" : 1,
-            "user_twitter" : "joeblog04",
-            "user_email" : "joe@bloggs.za",
-            "user_description" : "A normal dude",
-            "user_picture" : "09.jpg"
-        },
-        "report" : {
-            "report_id" : 5,
-            "report_title" : "Another UFO sighting",
-            "report_description" : "Really really there was a flying saucepan, ain't kiddin'",
-            "report_time_start" : 1378743849619,
-            "report_time_end" : null,
-            "report_timezone" : "BST",
-            "report_lat" : 51.505300,
-            "report_long" : -0.165477,
-            "report_media" : {
+        "another_ufo_sighting" : {
+            "title" : "Another UFO sighting",
+            "reporter" : 1,
+            "description" : "Really really there was a flying saucepan, ain't kiddin'",
+            "time_start" : 1378743849619,
+            "time_end" : null,
+            "timezone" : "BST",
+            "location" : [51.505309, -0.165487],
+            "media" : {
                 "media_video" : [],
                 "media_pictures" : [],
                 "media_audio" : [],
                 "media_links" : []
             },
-            "report_tags" : ["awesome", "UFO"],
-            "report_importance" : 0,
-            "report_editable" : false,
-            "report_upvotes" : 0,
-            "report_downvotes" : 0
+            "tags" : ["awesome", "UFO"],
+            "importance" : 0,
+            "editable" : false,
+            "upvotes" : 0,
+            "downvotes" : 0
         },
-        "event" : {
-            "event_id" : 3,
-            "event_name" : "London ufo sightings of 09/09/13",
-            "event_reports" : [2,5,10],
-            "event_time_start" : 1378743848616,
-            "event_time_end" : null,
-            "event_timezone" : "BST",
-            "event_lat" : 51.507298,
-            "event_long" : -0.127392,
-            "event_importance" : 2,
-            "event_upvotes" : 3,
-            "event_downvotes" : 2,
-            "event_category" : "custom"
-        }
-    },
-    {
-        "user" : {
-            "user_id" : 1,
-            "user_name" : "Bernardo",
-            "user_surname" : "Bertolucci",
-            "user_screen_name" : "bernardone",
-            "user_reputation" : 4,
-            "user_level" : 1,
-            "user_twitter" : "bernardbert",
-            "user_email" : "bbrb@gmail.com",
-            "user_description" : "Professional reporter",
-            "user_picture" : "bbernardone.jpg"
-        },
-        "report" : {
-            "report_id" : 10,
-            "report_title" : "Strange light in the sky",
-            "report_description" : "There is an UFO hovering over London",
-            "report_time_start" : 1378743848821,
-            "report_time_end" : null,
-            "report_timezone" : "BST",
-            "report_lat" : 51.505955,
-            "report_long" : -0.14863,
-            "report_media" : {
+        "strange_light_in_the_sky" : {
+            "title" : "Strange light in the sky",
+            "reporter" : 3,
+            "description" : "There is an UFO hovering over London",
+            "time_start" : 1378743848821,
+            "time_end" : null,
+            "timezone" : "BST",
+            "location" : [51.505955, -0.14863],
+            "media" : {
                 "media_video" : [],
                 "media_pictures" : [],
                 "media_audio" : [],
                 "media_links" : []
             },
-            "report_tags" : ["strange"],
-            "report_importance" : 1,
-            "report_editable" : false,
-            "report_upvotes" : 2,
-            "report_downvotes" : 2
+            "tags" : ["strange"],
+            "importance" : 1,
+            "editable" : false,
+            "upvotes" : 2,
+            "downvotes" : 2
         },
-        "event" : {
-            "event_id" : 3,
-            "event_name" : "London ufo sightings of 09/09/13",
-            "event_reports" : [2,5,10],
-            "event_time_start" : 1378743848616,
-            "event_time_end" : null,
-            "event_timezone" : "BST",
-            "event_lat" : 51.505300,
-            "event_long" : -0.165477,
-            "event_importance" : 2,
-            "event_upvotes" : 3,
-            "event_downvotes" : 2,
-            "event_category" : "custom"
-        }
-    },
-    {
-        "user" : {
-            "user_id" : 1,
-            "user_name" : "Joe",
-            "user_surname" : "Bloggs",
-            "user_screen_name" : "joebloggs",
-            "user_reputation" : 0,
-            "user_level" : 1,
-            "user_twitter" : "joeblog04",
-            "user_email" : "joe@bloggs.za",
-            "user_description" : "A normal dude",
-            "user_picture" : "09.jpg"
-        },
-        "report" : {
-            "report_id" : 15,
-            "report_title" : "Topshop sale",
-            "report_description" : "Oxford Circus's topshop has announced a sale",
-            "report_time_start" : 1378743848616,
-            "report_time_end" : null,
-            "report_timezone" : "BST",
-            "report_lat" : 51.505300,
-            "report_long" : -0.165477,
-            "report_media" : {
+        "topshop_sale" : {
+            "title" : "Topshop sale",
+            "reporter" : 1,
+            "description" : "Oxford Circus's topshop has announced a sale",
+            "time_start" : 1378743848616,
+            "time_end" : null,
+            "timezone" : "BST",
+            "location" : [51.505300, -0.165477],
+            "media" : {
                 "media_video" : [],
                 "media_pictures" : [],
                 "media_audio" : [],
                 "media_links" : []
             },
-            "report_tags" : ["awesome"],
-            "report_importance" : 1,
-            "report_editable" : false,
-            "report_upvotes" : 0,
-            "report_downvotes" : 0
-        },
-        "event" : {
-            "event_id" : 20,
-            "event_name" : "Topshop sale",
-            "event_reports" : [15],
-            "event_time_start" : 1433804400000,
-            "event_time_end" : 1381359600000,
-            "event_timezone" : "BST",
-            "event_lat" : 51.515366,
-            "event_long" : -0.141344,
-            "event_importance" : 2,
-            "event_upvotes" : 3,
-            "event_downvotes" : 2,
-            "event_category" : "around town"
-        }
-    }
-]
+            "tags" : ["awesome"],
+            "importance" : 1,
+            "editable" : false,
+            "upvotes" : 0,
+            "downvotes" : 0
+        }},
+    "events" : {
+        "london_ufo_sightings_of_sept_2013" : {
+            "name" : "London ufo sightings of sept 2013",
+            "description" : "A spate of ufo sightings",
+            "ríeports" : [2,5,10],
+            "time_start" : 1378743848616,
+            "time_end" : null,
+            "timezone" : "BST",
+            "location" : [51.505300, -0.165477],
+            "importance" : 2,
+            "upvotes" : 3,
+            "downvotes" : 2,
+            "category" : "custom"
+        },"topshop_sale" : {
+            "name" : "Topshop sale",
+            "description" : "Big sale in town",
+            "reports" : [15],
+            "time_start" : 1433804400000,
+            "time_end" : 1381359600000,
+            "timezone" : "BST",
+            "location" : [51.515366, -0.141344],
+            "importance" : 2,
+            "upvotes" : 3,
+            "downvotes" : 2,
+            "category" : "around town"
+        }}
+}

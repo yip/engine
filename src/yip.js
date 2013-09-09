@@ -54,16 +54,17 @@ yip.Engine = function YipEngine(config) {
 console.log('Start');
 
 var y = new yip.Engine({
-	firebase: 'jp1990'
+	//firebase: 'jp1990'
+	firebase: 'bc2013'
 });
 
-var u = y.User.fromId('x43424');
+var u = y.User.fromId('joebloggs');
 
 u.then(function(user) {
 	console.log('Ok got something', user.get());
 
 	user.on('change', function() {
-		console.log('Something has changed!', user.get());;
+		console.log('Something has changed!', user.get());
 	});
 });
 
