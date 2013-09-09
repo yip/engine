@@ -1,4 +1,4 @@
-{"root" : [
+[
     {
         "user" : {
             "user_id" : 1,
@@ -6,7 +6,11 @@
             "user_surname" : "Bloggs",
             "user_screen_name" : "joebloggs",
             "user_reputation" : 0,
-            "user_level" : 1
+            "user_level" : 1,
+            "user_twitter" : "joeblog04",
+            "user_email" : "joe@bloggs.za",
+            "user_description" : "A normal dude",
+            "user_picture" : "09.jpg"
         },
         "report" : {
             "report_id" : 2,
@@ -51,7 +55,11 @@
             "user_surname" : "Bloggs",
             "user_screen_name" : "joebloggs",
             "user_reputation" : 0,
-            "user_level" : 1
+            "user_level" : 1,
+            "user_twitter" : "joeblog04",
+            "user_email" : "joe@bloggs.za",
+            "user_description" : "A normal dude",
+            "user_picture" : "09.jpg"
         },
         "report" : {
             "report_id" : 5,
@@ -96,7 +104,11 @@
             "user_surname" : "Bertolucci",
             "user_screen_name" : "bernardone",
             "user_reputation" : 4,
-            "user_level" : 1
+            "user_level" : 1,
+            "user_twitter" : "bernardbert",
+            "user_email" : "bbrb@gmail.com",
+            "user_description" : "Professional reporter",
+            "user_picture" : "bbernardone.jpg"
         },
         "report" : {
             "report_id" : 10,
@@ -141,7 +153,11 @@
             "user_surname" : "Bloggs",
             "user_screen_name" : "joebloggs",
             "user_reputation" : 0,
-            "user_level" : 1
+            "user_level" : 1,
+            "user_twitter" : "joeblog04",
+            "user_email" : "joe@bloggs.za",
+            "user_description" : "A normal dude",
+            "user_picture" : "09.jpg"
         },
         "report" : {
             "report_id" : 15,
@@ -180,4 +196,3 @@
         }
     }
 ]
-}
