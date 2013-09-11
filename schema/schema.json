@@ -5,7 +5,7 @@
             "surname" : "Bloggs",
             "reputation" : 0,
             "level" : 1,
-            "twitter" : "joeblog04",
+            "twitter" : "@joeblog04",
             "email" : "joe@bloggs.za",
             "description" : "A normal dude",
             "picture" : "09.jpg"
@@ -16,7 +16,7 @@
             "screen_name" : "bernardone",
             "reputation" : 4,
             "level" : 1,
-            "twitter" : "bernardbert",
+            "twitter" : "@bernardbert",
             "email" : "bbrb@gmail.com",
             "description" : "Professional reporter",
             "picture" : "bbernardone.jpg"

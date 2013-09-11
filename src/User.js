@@ -2,11 +2,14 @@
 
 var Model = require('./util/Model');
 
+
 /**
  * 1st Class Entity under Yip
  * A User
  */
 var User = Model.extend({
+
+    name: 'user',
 
 	ref: 'https://{firebaseName}.firebaseio.com/users/{id}',
 
