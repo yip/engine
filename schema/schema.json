@@ -7,7 +7,7 @@
             "level" : 1,
             "twitter" : "@joeblog04",
             "email" : "joe@bloggs.za",
-            "description" : "A normal dude",
+            "bio" : "A normal dude",
             "picture" : "09.jpg"
         },
         "bernardone" : {
@@ -18,16 +18,16 @@
             "level" : 1,
             "twitter" : "@bernardbert",
             "email" : "bbrb@gmail.com",
-            "description" : "Professional reporter",
+            "bio" : "Professional reporter",
             "picture" : "bbernardone.jpg"
-        }},
-    "reports" : {
+        }
+    },
+    "updates" : {
         "ufo_sighting" : {
             "title" : "UFO sighting",
             "reporter" : 1,
             "description" : "Saw a flying saucepan earlier today",
-            "time_start" : 1378743848616,
-            "time_end" : null,
+            "time" : 1378743848616,
             "timezone" : "BST",
             "location" : [51.505300, -0.165477],
             "media" : {
@@ -46,8 +46,7 @@
             "title" : "Another UFO sighting",
             "reporter" : 1,
             "description" : "Really really there was a flying saucepan, ain't kiddin'",
-            "time_start" : 1378743849619,
-            "time_end" : null,
+            "time" : 1378743849619,
             "timezone" : "BST",
             "location" : [51.505309, -0.165487],
             "media" : {
@@ -66,8 +65,7 @@
             "title" : "Strange light in the sky",
             "reporter" : 3,
             "description" : "There is an UFO hovering over London",
-            "time_start" : 1378743848821,
-            "time_end" : null,
+            "time" : 1378743848821,
             "timezone" : "BST",
             "location" : [51.505955, -0.14863],
             "media" : {
@@ -86,8 +84,7 @@
             "title" : "Topshop sale",
             "reporter" : 1,
             "description" : "Oxford Circus's topshop has announced a sale",
-            "time_start" : 1378743848616,
-            "time_end" : null,
+            "time" : 1378743848616,
             "timezone" : "BST",
             "location" : [51.505300, -0.165477],
             "media" : {
@@ -101,12 +98,14 @@
             "editable" : false,
             "upvotes" : 0,
             "downvotes" : 0
-        }},
-    "events" : {
+        }
+    },
+    "reports" : {
         "london_ufo_sightings_of_sept_2013" : {
             "name" : "London ufo sightings of sept 2013",
             "description" : "A spate of ufo sightings",
-            "ríeports" : [2,5,10],
+            "reporter" : 1,
+            "updates" : [2,5,10],
             "time_start" : 1378743848616,
             "time_end" : null,
             "timezone" : "BST",
@@ -114,11 +113,14 @@
             "importance" : 2,
             "upvotes" : 3,
             "downvotes" : 2,
+            "editable" : true,
             "category" : "custom"
-        },"topshop_sale" : {
+        },
+        "topshop_sale" : {
             "name" : "Topshop sale",
             "description" : "Big sale in town",
-            "reports" : [15],
+            "reporter" : 1,
+            "updates" : [15],
             "time_start" : 1433804400000,
             "time_end" : 1381359600000,
             "timezone" : "BST",
@@ -126,6 +128,8 @@
             "importance" : 2,
             "upvotes" : 3,
             "downvotes" : 2,
+            "editable" : true,
             "category" : "around town"
-        }}
+        }
+    }
 }

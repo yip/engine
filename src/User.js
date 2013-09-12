@@ -20,7 +20,7 @@ var User = Model.extend({
         "level" : 1,
         "twitter" : "",
         "email" : "",
-        "description" : "",
+        "bio" : "",
         "picture" : ""
 	},
 

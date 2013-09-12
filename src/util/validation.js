@@ -1,5 +1,6 @@
 var rules = require('./validationRules');
 
+//TODO: sanitation, error messages
 var Validation = function(model) {
     var modelRuleSet = model.name ? rules[model.name] : rules,
         hasOwn = {}.hasOwnProperty,
@@ -9,21 +10,21 @@ var Validation = function(model) {
 
     for (var i in model.defaults) {
         if (hasOwn.call(model.defaults, i)) {
-            func = '';
-            console.log(i,model.defaults,modelRuleSet, modelRuleSet[key]);
+            func = 'var isValid=true;\r\n';
             ruleString = modelRuleSet[i].split(',');
             for (var a = 0, len = ruleString.length ; a < len ; a++) {
                 str = ruleString[a];
                 if(!str.indexOf('is ')) {
-                    func += ' if (!typeof value !== "' + str.substr(3) + '"){isValid = false}\r\n';
+                    func += ' if (typeof value !== "' + str.substr(3) + '"){isValid = false}\r\n';
                 } else if (!str.indexOf('test ')) {
                     func += ' if (!value.test(' + str.substr(5) + '){isValid = false}\r\n';
                 } else if (!str.indexOf('assert ')) {
                     func += ' if (!value ' + str.substr(7) + '){isValid = false}\r\n';
                 }
             }
-            func += 'return isValid';
-            model.rules[i] = new Function(func);
+            func += 'return isValid;';
+
+            model.rules[i] = new Function('value', func);
         }
     }
 };

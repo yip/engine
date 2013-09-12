@@ -83,7 +83,7 @@ _.extend(Model.prototype, {
 				if (hasOwn.call(k, i)) {
                     if (k[i] && this.rules && this.rules[i] && !this.rules[i].call(this, k[i])) {
                         console.error("Invalid data for ", k[i]);
-                        return false;
+                        continue;
                     }
 					this.data[i] = k[i];
 				}
