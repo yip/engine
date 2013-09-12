@@ -3,6 +3,7 @@
 var _ = require('lodash');
 var when = require('when');
 var Firebase = require('firebase');
+var Validation = require('./Validation');
 
 var hasOwn = {}.hasOwnProperty;
 var toString = {}.toString;
@@ -13,7 +14,9 @@ module.exports = Model;
  * Model Class
  */
 function Model(data, engine) {
+
 	this.data = _.extend({}, this.defaults, data || {});
+
 	this.engine = engine;
 
 	this._isSynced = false; // is synced to db via engine?
@@ -26,6 +29,8 @@ function Model(data, engine) {
 	this.__initPromise__ = this._spawnPromise(function(resolve, reject, notify) {
 		// This
 	});
+
+    this.validation = new Validation(this);
 }
 
 /**
@@ -72,13 +77,22 @@ _.extend(Model.prototype, {
 	defaults: {},
 
 	set: function(k, v) {
+
 		if (toString.call(k) === '[object Object]') {
 			for (var i in k) {
 				if (hasOwn.call(k, i)) {
+                    if (k[i] && this.rules && this.rules[i] && !this.rules[i].call(this, k[i])) {
+                        console.error("Invalid data for ", k[i]);
+                        continue;
+                    }
 					this.data[i] = k[i];
 				}
 			}
 		} else {
+            if (v && this.rules && this.rules[k] && !this.rules[k].call(this, v)) {
+                console.error("Invalid data for ", v);
+                return false;
+            }
 			this.data[k] = v;
 		}
 	},
