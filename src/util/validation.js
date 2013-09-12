@@ -2,6 +2,7 @@ var rules = require('./validationRules');
 
 //TODO: sanitation, error messages
 var Validation = function(model) {
+
     var modelRuleSet = model.name ? rules[model.name] : rules,
         hasOwn = {}.hasOwnProperty,
         key, ruleString, func = 'var value = arguments[0];\r\n var isValid=true;\r\n', str;
@@ -9,17 +10,17 @@ var Validation = function(model) {
     model.rules = model.rules || {};
 
     for (var i in model.defaults) {
-        if (hasOwn.call(model.defaults, i)) {
+        if (hasOwn.call(model.defaults, i) && modelRuleSet[i]) {
             func = 'var isValid=true;\r\n';
-            ruleString = modelRuleSet[i].split(',');
+            ruleString = modelRuleSet[i].split(', ');
             for (var a = 0, len = ruleString.length ; a < len ; a++) {
-                str = ruleString[a];
+                str = ruleString[a].trim();
                 if(!str.indexOf('is ')) {
                     func += ' if (typeof value !== "' + str.substr(3) + '"){isValid = false}\r\n';
                 } else if (!str.indexOf('test ')) {
-                    func += ' if (!value.test(' + str.substr(5) + '){isValid = false}\r\n';
+                    func += ' if (!' + str.substr(5) + '.test(value)){isValid = false}\r\n';
                 } else if (!str.indexOf('assert ')) {
-                    func += ' if (!value ' + str.substr(7) + '){isValid = false}\r\n';
+                    func += ' if (!value' + str.substr(7) + '){isValid = false}\r\n';
                 }
             }
             func += 'return isValid;';
