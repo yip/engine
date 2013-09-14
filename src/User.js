@@ -14,14 +14,14 @@ var User = Model.extend({
 	ref: 'https://{firebaseName}.firebaseio.com/users/{id}',
 
 	defaults: {
-		"name" : "",
-		"surname" : "",
-		"reputation" : 0,
-		"level" : 1,
-		"twitter" : "",
-		"email" : "",
-		"bio" : "",
-		"picture" : ""
+		name: '',
+		surname: '',
+		reputation: 0,
+		level: 1,
+		twitter: '',
+		email: '',
+		bio: '',
+		picture: ''
 	},
 
 	init: function() {
