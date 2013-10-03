@@ -13,7 +13,7 @@
 		"bernardone" : {
 			"name" : "Bernardo",
 			"surname" : "Bertolucci",
-			"screen_name" : "bernardone",
+			"screen_name" : "bernardo",
 			"reputation" : 4,
 			"level" : 1,
 			"twitter" : "@bernardbert",
@@ -106,6 +106,7 @@
 			"description" : "A spate of ufo sightings",
 			"reporter" : "joebloggs",
 			"updates" : [2,5,10],
+            "relationships" : [],
 			"time_start" : 1378743848616,
 			"time_end" : null,
 			"timezone" : "BST",
@@ -117,11 +118,32 @@
 			"editable" : true,
 			"category" : "custom"
 		},
+        "traffic_jam" : {
+            "name" : "Traffic jam in Oxford Circus",
+            "description" : "Bus being on diversion",
+            "reporter" : "joebloggs",
+            "updates" : [],
+            "relationships" : [{
+                "id" : "topshop_sale",
+                "weight" : 10
+            }],
+            "time_start" : 1433804401000,
+            "time_end" : 1381359602000,
+            "timezone" : "BST",
+            "location" : [51.515366, -0.141344],
+            "tags" : ["terrible", "traffic"],
+            "importance" : 2,
+            "upvotes" : 3,
+            "downvotes" : 2,
+            "editable" : true,
+            "category" : "around town"
+        },
 		"topshop_sale" : {
 			"name" : "Topshop sale",
 			"description" : "Big sale in town",
 			"reporter" : "joebloggs",
 			"updates" : [15],
+            "relationships" : [],
 			"time_start" : 1433804400000,
 			"time_end" : 1381359600000,
 			"timezone" : "BST",

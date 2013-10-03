@@ -68,5 +68,10 @@ u.then(function(user) {
 	});
 });
 
+var r = new y.Report({
+    'id' : 'this is a test',
+    'time_start' : 1433804400000,
+    'time_end' : 1381359600000
+});
 
 console.log('End');

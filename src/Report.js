@@ -1,6 +1,7 @@
 'use strict';
 
 var Model = require('./util/Model');
+var Radar = require('./Radar');
 
 /**
  * 1st Class Entity under Yip
@@ -28,7 +29,11 @@ module.exports = Model.extend({
 	},
 
 	init: function() {
-
+        this.radar = new Radar();
+        this.engine.db.getModels('/reports', null, function (data) {
+            //TODO check the zillion bug in the example rules, plus save the relationships
+            this.radar.establishRelationship(this, data.val());
+        }, this);
 	}
 
 });

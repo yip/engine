@@ -45,7 +45,16 @@ DB.prototype = {
 
 		});
 
-	}
+	},
+
+    getModels : function (query, limit, callback, context) {
+        var path = 'https://' + this.config.firebase + '.firebaseio.com' + query;
+        var fb = new Firebase(path);
+        //TODO add limit
+        fb.on('value', function(data) {
+            callback.call(context, data); //TODO something less hopelessly naive than this method
+        });
+    }
 
 };
 
