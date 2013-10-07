@@ -10,6 +10,8 @@ var User = require('./User');
 var ReportUpdate = require('./ReportUpdate');
 var DB = require('./util/DB');
 
+var Twitter = require('./external_providers/Twitter');
+
 /**
  * yip.Engine
  * Core class which gives you a unique Yip which will interface with a 
@@ -68,10 +70,14 @@ u.then(function(user) {
 	});
 });
 
-var r = new y.Report({
+/*var r = new y.Report({
     'id' : 'this is a test',
     'time_start' : 1433804400000,
     'time_end' : 1381359600000
-});
+});*/
+
+var twtr = new Twitter();
+twtr.set('q', 'fire');
+twtr.executeQuery();
 
 console.log('End');
