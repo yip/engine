@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var User = require('../src/User');
+var User = require('../../src/core/User');
 
 describe('User', function() {
 	it('Has correct defaults', function() {

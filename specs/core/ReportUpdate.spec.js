@@ -1,7 +1,7 @@
 'use strict';
 
 var expect = require('chai').expect;
-var ReportUpdate = require('../src/ReportUpdate');
+var ReportUpdate = require('../../src/core/ReportUpdate');
 
 describe('ReportUpdate', function() {
 	it('Has correct defaults', function() {
