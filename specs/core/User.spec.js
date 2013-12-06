@@ -1,15 +1,8 @@
 'use strict';
 
 var expect = require('chai').expect;
-var User = require('../../src/core/User');
+var User = require('../../src/core/models/User');
 
 describe('User', function() {
-	it('Has correct defaults', function() {
-		expect(new User().get()).to.eql({
-			id: null,
-			name: '',
-			email: '',
-			twitter: ''
-		});
-	});
+	
 });
