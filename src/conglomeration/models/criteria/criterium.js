@@ -18,6 +18,7 @@ Criterium.prototype.check = function (config) {
     if (success) {
         this.emit('success');
     }
+    return success;
 };
 
 Criterium.prototype.onSuccess = function (config) {

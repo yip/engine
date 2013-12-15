@@ -28,5 +28,24 @@ Conglomeration.prototype.onAddedReport = function () {
     // save conglomeration
 };
 
+Conglomeration.prototype.update = function () {
+
+    var i = 0, len = arguments.length;
+
+    for (; i < len; i++) {
+        for (var prop in arguments[i]) {
+            if (arguments[i].hasOwnProperty(prop)) {
+                var val = arguments[i][prop];
+                if (typeof val == "object") {
+                    this.update(val);
+                } else {
+                    this._config[prop] = val;
+                }
+            }
+        }
+    }
+    return val;
+};
+
 
 module.exports = Conglomeration;
