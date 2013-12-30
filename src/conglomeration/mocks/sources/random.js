@@ -1,6 +1,6 @@
 'use strict';
 
-var Model = require('../../../core/models/Report');
+var Model = require('../../../common/models/Report');
 
 function Random () {
     console.log('Random is alive!')

@@ -4,11 +4,11 @@
 var log = require('./util/logger');
 var _ = require('lodash');
 
-var Report = require('./models/Report');
-var User = require('./models/User');
-var ReportUpdate = require('./models/ReportUpdate');
+var Report = require('../common/models/Report');
+var User = require('../common/models/User');
+var ReportUpdate = require('../common/models/ReportUpdate');
 
-var DB = require('./util/DB');
+var DB = require('../common/util/DB');
 
 module.exports = Core;
 

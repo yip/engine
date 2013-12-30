@@ -1,13 +1,12 @@
 'use strict';
 
 var _ = require('lodash');
-var util = require('../util/util');
+var util = require('../../core/util/util');
 
 module.exports = function(data) {
 	return _.extend({
-		meta: {},
-		data: {},
+		// todo
 		created: +new Date,
-		id: util.uuid('report')
+		id: util.uuid('user')
 	}, data);
 }

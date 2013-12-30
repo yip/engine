@@ -1,5 +1,7 @@
 'use strict';
 
+var db = require('../common/util/DB');
+
 function Conglomeration(config) {
     this._config = {
         attributes : {

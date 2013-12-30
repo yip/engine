@@ -1,7 +1,7 @@
 'use strict';
 
 var _ = require('lodash');
-var util = require('../util/util');
+var util = require('../../core/util/util');
 
 module.exports = function(data) {
 	return _.extend({

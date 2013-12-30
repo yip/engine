@@ -8,7 +8,9 @@ var Main = require('../main'),
 function CoreMock () {};
 
 CoreMock.prototype.initialize = function () {
-    main = new Main();
+    main = new Main({
+        firebase : 'bc2013'
+    });
     this.startTimer();
 };
 
