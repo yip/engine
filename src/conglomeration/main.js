@@ -1,8 +1,8 @@
 'use strict';
 
 var Conglomeration = require('../common/models/Conglomeration');
-var DB = require('../common/util/DB');
-var when = require('')
+var DB = require('../common/util/db');
+var when = require('');
 
 /**
  *
@@ -24,6 +24,7 @@ Main.prototype.initialize = function () {
 
 Main.prototype.onReport = function (report) {
     console.info('A report has arrived ', report);
+
 
     // query the database for a conglomeration that fits the bill
     // if there's none, create a new conglomeration

@@ -1,6 +1,6 @@
 'use strict';
 
-var db = require('../common/util/DB');
+var db = require('../util/GeoDB');
 
 function Conglomeration(config) {
     this._config = {

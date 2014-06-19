@@ -3,6 +3,6 @@
 var expect = require('chai').expect;
 var User = require('../../src/common/models/User');
 
-describe('User', function() {
+describe('User', function() {v
 	
 });
